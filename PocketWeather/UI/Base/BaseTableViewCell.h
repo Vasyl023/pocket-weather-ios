@@ -12,9 +12,9 @@
 
 @interface BaseTableViewCellDataSource : NSObject
 
-@property (assign, nonatomic) int height;
+@property (assign, nonatomic) float height;
 
-+ (int)height;
++ (float)height;
 + (NSString*)reuseIdentifier;
 + (NSString*)nibName;
 
@@ -22,5 +22,7 @@
 
 
 @interface BaseTableViewCell : UITableViewCell
+
+@property (strong, nonatomic) BaseTableViewCellDataSource* dataSource;
 
 @end

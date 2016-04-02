@@ -18,7 +18,7 @@
     return @"ColorTableViewCell";
 }
 
-+ (int)height{
++ (float)height{
     return COLOR_TABLE_CELL_HEIGHT;
 }
 

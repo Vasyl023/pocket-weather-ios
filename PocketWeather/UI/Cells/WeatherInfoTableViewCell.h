@@ -15,7 +15,9 @@
 
 @end
 
-@interface WeatherInfoTableViewCell : BaseTableViewCell
 
+@interface WeatherInfoTableViewCell : BaseTableViewCell{
+    WeatherInfoTableViewCellDataSource* dataSource;
+}
 
 @end

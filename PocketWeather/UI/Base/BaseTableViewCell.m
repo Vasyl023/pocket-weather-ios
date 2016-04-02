@@ -10,17 +10,24 @@
 // Data Source
 @implementation BaseTableViewCellDataSource
 
+- (id)init{
+    self = [super init];
+    if (self) {
+    }
+    return self;
+}
+
+
 + (NSString*)reuseIdentifier{
     NSAssert(NO, @"Add uniq identifier");
     return @"";
 }
 
-
 + (NSString*)nibName{
     NSAssert(NO, @"Add nibName identifier");
     return @"";
 }
-+ (int)height{
++ (float)height{
     NSAssert(NO, @"Add height");
     return 0;
 }

@@ -14,7 +14,10 @@
 @end
 
 
-@interface ColorTableViewCell : UITableViewCell
+@interface ColorTableViewCell : BaseTableViewCell{
+    ColorTableViewCellDataSource* dataSource;
+}
+
 
 
 @end

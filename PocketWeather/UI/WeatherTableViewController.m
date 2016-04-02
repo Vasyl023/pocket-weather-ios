@@ -8,9 +8,10 @@
 
 #import "WeatherTableViewController.h"
 #import "ColorTableViewCell.h"
+#import "WeatherInfoTableViewCell.h"
 
 @interface WeatherTableViewController (){
-    NSArray *weatherCells;
+    NSMutableArray *weatherDataSources;
 }
 
 @end
@@ -22,12 +23,25 @@
     
     tableDisposer.delegate = self;
     tableDisposer.dataSource = self;
+    tableDisposer.rowHeight = 40.0;
+    tableDisposer.estimatedRowHeight = 40.0;
     
     // Fill Data
+    [self fillDataSources];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)fillDataSources{
+    weatherDataSources = [NSMutableArray array];
+    WeatherInfoTableViewCellDataSource* data = [[WeatherInfoTableViewCellDataSource alloc] init];
+    [weatherDataSources addObject:data];
+    
+    for (int i = 0; i < 10; i++) {
+        [weatherDataSources addObject:[[ColorTableViewCellDataSource alloc] init]];
+    }
 }
 
 
@@ -40,22 +54,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 10;    //count number of row from counting array hear cataGorry is An Array
+    return [weatherDataSources count];    //count number of row from counting array hear cataGorry is An Array
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewAutomaticDimension;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    ColorTableViewCell *cell = (ColorTableViewCell *)[tableView dequeueReusableCellWithIdentifier:[ColorTableViewCellDataSource reuseIdentifier]];
+    BaseTableViewCell *cell = (BaseTableViewCell *)[tableView dequeueReusableCellWithIdentifier:[[weatherDataSources[indexPath.row] class] reuseIdentifier]];
     
     if (cell == nil)
     {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:[ColorTableViewCellDataSource nibName] owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:[[weatherDataSources[indexPath.row] class] nibName] owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
     
-    cell.detailTextLabel.text = @"test";
+    cell.dataSource = weatherDataSources[indexPath.row];
     
     return cell;
 }
@@ -63,8 +81,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [ColorTableViewCellDataSource height];
+    return [[weatherDataSources[indexPath.row] class] height];
+
 }
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }

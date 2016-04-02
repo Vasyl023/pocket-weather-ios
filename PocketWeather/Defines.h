@@ -9,6 +9,7 @@
 #ifndef Defines_h
 #define Defines_h
 
-#define COLOR_TABLE_CELL_HEIGHT             60
+#define COLOR_TABLE_CELL_HEIGHT                     40.0
+#define WEATHER_MAIN_TABLE_CELL_HEIGHT              190.0
 
 #endif /* Defines_h */

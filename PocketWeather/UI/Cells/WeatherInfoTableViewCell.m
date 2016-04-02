@@ -9,12 +9,24 @@
 #import "WeatherInfoTableViewCell.h"
 
 @implementation WeatherInfoTableViewCellDataSource
+
+- (id)init{
+    self = [super init];
+    if (self) {
+    }
+    return self;
+}
+
 + (NSString*)reuseIdentifier{
     return @"weather_info_uniq_cell";
 }
 
 + (NSString*)nibName{
     return @"WeatherInfoTableViewCell";
+}
+
++ (float)height{
+    return WEATHER_MAIN_TABLE_CELL_HEIGHT;
 }
 
 @end
