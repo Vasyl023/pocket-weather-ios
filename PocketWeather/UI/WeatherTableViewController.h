@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PochetWeather.h"
 
-@interface WeatherTableViewController : UIViewController{
-    UITableView* tableDisposer;
-    
+@interface WeatherTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>{
+    __weak IBOutlet UITableView *tableDisposer;
 }
+
+@property (strong, nonatomic) PochetWeather *weather;
+
 
 @end

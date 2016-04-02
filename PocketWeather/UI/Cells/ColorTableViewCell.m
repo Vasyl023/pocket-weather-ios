@@ -1,29 +1,34 @@
 //
-//  WeatherInfoTableViewCell.m
+//  ColorTableViewCell.m
 //  PocketWeather
 //
 //  Created by Vasyl Pastushenko on 4/2/16.
 //  Copyright © 2016 Vasyl Pastushenko. All rights reserved.
 //
 
-#import "WeatherInfoTableViewCell.h"
+#import "ColorTableViewCell.h"
 
-@implementation WeatherInfoTableViewCellDataSource
+@implementation ColorTableViewCellDataSource
+
 + (NSString*)reuseIdentifier{
-    return @"weather_info_uniq_cell";
+    return @"color_info_uniq_cell";
 }
 
 + (NSString*)nibName{
-    return @"WeatherInfoTableViewCell";
+    return @"ColorTableViewCell";
+}
+
++ (int)height{
+    return COLOR_TABLE_CELL_HEIGHT;
 }
 
 @end
 
-
-@implementation WeatherInfoTableViewCell
+@implementation ColorTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.backgroundColor = [UIColor orangeColor];
     // Initialization code
 }
 
@@ -32,4 +37,5 @@
 
     // Configure the view for the selected state
 }
+
 @end

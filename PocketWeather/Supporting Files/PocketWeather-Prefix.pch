@@ -1,0 +1,12 @@
+//
+//  PocketWeather-Prefix.pch
+//  PocketWeather
+//
+//  Created by Vasyl Pastushenko on 4/2/16.
+//  Copyright © 2016 Vasyl Pastushenko. All rights reserved.
+//
+
+#ifndef PocketWeather_Prefix_pch
+#define PocketWeather_Prefix_pch
+#import "Defines.h"
+#endif /* PocketWeather_Prefix_pch */

@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		5CF1DF3B127710DA6B6F04A8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6988A483B0E679D1A154945D /* libPods.a */; };
 		E192989A1CAFC7DD0030812A /* WeatherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19298991CAFC7DD0030812A /* WeatherTableViewController.m */; };
-		E192989E1CAFC8E00030812A /* WeatherInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E192989D1CAFC8E00030812A /* WeatherInfoTableViewCell.m */; };
 		E19298A11CAFC98F0030812A /* PochetWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = E19298A01CAFC98F0030812A /* PochetWeather.m */; };
 		E19298A41CAFCAEC0030812A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19298A21CAFCAEC0030812A /* FBSDKCoreKit.framework */; };
 		E19298A51CAFCAEC0030812A /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19298A31CAFCAEC0030812A /* FBSDKLoginKit.framework */; };
 		E19298A81CAFD0480030812A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E19298A71CAFD0480030812A /* User.m */; };
+		E19298AF1CAFDF570030812A /* WeatherInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E19298AD1CAFDF570030812A /* WeatherInfoTableViewCell.m */; };
+		E19298B01CAFDF570030812A /* WeatherInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19298AE1CAFDF570030812A /* WeatherInfoTableViewCell.xib */; };
+		E19298B41CAFDF740030812A /* ColorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E19298B21CAFDF740030812A /* ColorTableViewCell.m */; };
+		E19298B51CAFDF740030812A /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19298B31CAFDF740030812A /* ColorTableViewCell.xib */; };
+		E19298B91CAFE2FF0030812A /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E19298B81CAFE2FF0030812A /* BaseTableViewCell.m */; };
 		E1BB160D1CAEDCCD0031D0B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BB160C1CAEDCCD0031D0B7 /* main.m */; };
 		E1BB16101CAEDCCD0031D0B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BB160F1CAEDCCD0031D0B7 /* AppDelegate.m */; };
 		E1BB16161CAEDCCD0031D0B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BB16141CAEDCCD0031D0B7 /* Main.storyboard */; };
@@ -46,14 +50,22 @@
 		6988A483B0E679D1A154945D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19298981CAFC7DD0030812A /* WeatherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherTableViewController.h; path = UI/WeatherTableViewController.h; sourceTree = "<group>"; };
 		E19298991CAFC7DD0030812A /* WeatherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherTableViewController.m; path = UI/WeatherTableViewController.m; sourceTree = "<group>"; };
-		E192989C1CAFC8E00030812A /* WeatherInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherInfoTableViewCell.h; path = UI/Cells/WeatherInfoTableViewCell.h; sourceTree = "<group>"; };
-		E192989D1CAFC8E00030812A /* WeatherInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherInfoTableViewCell.m; path = UI/Cells/WeatherInfoTableViewCell.m; sourceTree = "<group>"; };
 		E192989F1CAFC98F0030812A /* PochetWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PochetWeather.h; path = Models/PochetWeather.h; sourceTree = "<group>"; };
 		E19298A01CAFC98F0030812A /* PochetWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PochetWeather.m; path = Models/PochetWeather.m; sourceTree = "<group>"; };
 		E19298A21CAFCAEC0030812A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E19298A31CAFCAEC0030812A /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E19298A61CAFD0480030812A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Models/User.h; sourceTree = "<group>"; };
 		E19298A71CAFD0480030812A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Models/User.m; sourceTree = "<group>"; };
+		E19298AC1CAFDF570030812A /* WeatherInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherInfoTableViewCell.h; path = UI/Cells/WeatherInfoTableViewCell.h; sourceTree = "<group>"; };
+		E19298AD1CAFDF570030812A /* WeatherInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherInfoTableViewCell.m; path = UI/Cells/WeatherInfoTableViewCell.m; sourceTree = "<group>"; };
+		E19298AE1CAFDF570030812A /* WeatherInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeatherInfoTableViewCell.xib; path = UI/Cells/WeatherInfoTableViewCell.xib; sourceTree = "<group>"; };
+		E19298B11CAFDF740030812A /* ColorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorTableViewCell.h; path = UI/Cells/ColorTableViewCell.h; sourceTree = "<group>"; };
+		E19298B21CAFDF740030812A /* ColorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorTableViewCell.m; path = UI/Cells/ColorTableViewCell.m; sourceTree = "<group>"; };
+		E19298B31CAFDF740030812A /* ColorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ColorTableViewCell.xib; path = UI/Cells/ColorTableViewCell.xib; sourceTree = "<group>"; };
+		E19298B71CAFE2FF0030812A /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewCell.h; path = UI/Base/BaseTableViewCell.h; sourceTree = "<group>"; };
+		E19298B81CAFE2FF0030812A /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewCell.m; path = UI/Base/BaseTableViewCell.m; sourceTree = "<group>"; };
+		E19298BB1CAFEC950030812A /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		E19298BC1CAFED8D0030812A /* PocketWeather-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PocketWeather-Prefix.pch"; path = "Supporting Files/PocketWeather-Prefix.pch"; sourceTree = "<group>"; };
 		E1BB16081CAEDCCD0031D0B7 /* PocketWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BB160C1CAEDCCD0031D0B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1BB160E1CAEDCCD0031D0B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +123,7 @@
 		E19298921CAFC7570030812A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E19298B61CAFE2CD0030812A /* BaseUI */,
 				E192989B1CAFC8340030812A /* Cells */,
 				E19298981CAFC7DD0030812A /* WeatherTableViewController.h */,
 				E19298991CAFC7DD0030812A /* WeatherTableViewController.m */,
@@ -139,10 +152,23 @@
 		E192989B1CAFC8340030812A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E192989C1CAFC8E00030812A /* WeatherInfoTableViewCell.h */,
-				E192989D1CAFC8E00030812A /* WeatherInfoTableViewCell.m */,
+				E19298AC1CAFDF570030812A /* WeatherInfoTableViewCell.h */,
+				E19298AD1CAFDF570030812A /* WeatherInfoTableViewCell.m */,
+				E19298AE1CAFDF570030812A /* WeatherInfoTableViewCell.xib */,
+				E19298B11CAFDF740030812A /* ColorTableViewCell.h */,
+				E19298B21CAFDF740030812A /* ColorTableViewCell.m */,
+				E19298B31CAFDF740030812A /* ColorTableViewCell.xib */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		E19298B61CAFE2CD0030812A /* BaseUI */ = {
+			isa = PBXGroup;
+			children = (
+				E19298B71CAFE2FF0030812A /* BaseTableViewCell.h */,
+				E19298B81CAFE2FF0030812A /* BaseTableViewCell.m */,
+			);
+			name = BaseUI;
 			sourceTree = "<group>";
 		};
 		E1BB15FF1CAEDCCD0031D0B7 = {
@@ -188,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				E1BB160C1CAEDCCD0031D0B7 /* main.m */,
+				E19298BC1CAFED8D0030812A /* PocketWeather-Prefix.pch */,
+				E19298BB1CAFEC950030812A /* Defines.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -325,9 +353,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E19298B01CAFDF570030812A /* WeatherInfoTableViewCell.xib in Resources */,
 				E1BB161B1CAEDCCD0031D0B7 /* LaunchScreen.storyboard in Resources */,
 				E1BB16181CAEDCCD0031D0B7 /* Assets.xcassets in Resources */,
 				E1BB16161CAEDCCD0031D0B7 /* Main.storyboard in Resources */,
+				E19298B51CAFDF740030812A /* ColorTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,9 +430,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E19298AF1CAFDF570030812A /* WeatherInfoTableViewCell.m in Sources */,
 				E19298A81CAFD0480030812A /* User.m in Sources */,
-				E192989E1CAFC8E00030812A /* WeatherInfoTableViewCell.m in Sources */,
 				E1BB16101CAEDCCD0031D0B7 /* AppDelegate.m in Sources */,
+				E19298B41CAFDF740030812A /* ColorTableViewCell.m in Sources */,
+				E19298B91CAFE2FF0030812A /* BaseTableViewCell.m in Sources */,
 				E19298A11CAFC98F0030812A /* PochetWeather.m in Sources */,
 				E192989A1CAFC7DD0030812A /* WeatherTableViewController.m in Sources */,
 				E1BB160D1CAEDCCD0031D0B7 /* main.m in Sources */,
@@ -553,6 +585,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PocketWeather/Supporting Files/PocketWeather-Prefix.pch";
 				INFOPLIST_FILE = PocketWeather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -570,6 +605,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PocketWeather/Supporting Files/PocketWeather-Prefix.pch";
 				INFOPLIST_FILE = PocketWeather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

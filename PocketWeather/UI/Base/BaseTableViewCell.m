@@ -1,35 +1,42 @@
 //
-//  WeatherInfoTableViewCell.m
+//  BaseTableViewCell.m
 //  PocketWeather
 //
 //  Created by Vasyl Pastushenko on 4/2/16.
 //  Copyright © 2016 Vasyl Pastushenko. All rights reserved.
 //
 
-#import "WeatherInfoTableViewCell.h"
+#import "BaseTableViewCell.h"
+// Data Source
+@implementation BaseTableViewCellDataSource
 
-@implementation WeatherInfoTableViewCellDataSource
 + (NSString*)reuseIdentifier{
-    return @"weather_info_uniq_cell";
+    NSAssert(NO, @"Add uniq identifier");
+    return @"";
 }
 
+
 + (NSString*)nibName{
-    return @"WeatherInfoTableViewCell";
+    NSAssert(NO, @"Add nibName identifier");
+    return @"";
+}
++ (int)height{
+    NSAssert(NO, @"Add height");
+    return 0;
 }
 
 @end
 
 
-@implementation WeatherInfoTableViewCell
+@implementation BaseTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
 }
+
 @end

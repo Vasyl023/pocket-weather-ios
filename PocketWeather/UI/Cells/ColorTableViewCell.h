@@ -1,5 +1,5 @@
 //
-//  WeatherInfoTableViewCell.h
+//  ColorTableViewCell.h
 //  PocketWeather
 //
 //  Created by Vasyl Pastushenko on 4/2/16.
@@ -9,13 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "BaseTableViewCell.h"
 
-
-@interface WeatherInfoTableViewCellDataSource : BaseTableViewCellDataSource
-
+@interface ColorTableViewCellDataSource : BaseTableViewCellDataSource
 
 @end
 
-@interface WeatherInfoTableViewCell : BaseTableViewCell
+
+@interface ColorTableViewCell : UITableViewCell
 
 
 @end

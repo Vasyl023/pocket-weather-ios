@@ -7,8 +7,11 @@
 //
 
 #import "WeatherTableViewController.h"
+#import "ColorTableViewCell.h"
 
-@interface WeatherTableViewController ()
+@interface WeatherTableViewController (){
+    NSArray *weatherCells;
+}
 
 @end
 
@@ -16,22 +19,60 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    tableDisposer.delegate = self;
+    tableDisposer.dataSource = self;
+    
+    // Fill Data
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
+
+#pragma mark - Table View
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 10;    //count number of row from counting array hear cataGorry is An Array
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    ColorTableViewCell *cell = (ColorTableViewCell *)[tableView dequeueReusableCellWithIdentifier:[ColorTableViewCellDataSource reuseIdentifier]];
+    
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:[ColorTableViewCellDataSource nibName] owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    cell.detailTextLabel.text = @"test";
+    
+    return cell;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [ColorTableViewCellDataSource height];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
