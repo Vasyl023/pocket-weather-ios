@@ -12,7 +12,13 @@
 
 - (id)init{
     self = [super init];
+    return self;
+}
+
+- (id)initWithWeatherId:(NSString*)anID{
+    self = [super init];
     if (self) {
+        self.backgroundWeatherColor = [[[WeatherColor alloc] initWithWeathearId:anID] getColor];
     }
     return self;
 }
@@ -36,12 +42,24 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void)setData:(WeatherInfoTableViewCellDataSource*)aData{
+    self.dataSource = aData;
+    [self layoutSubviews];
+
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    [self.contentView layoutIfNeeded];
+
+    self.backgroundColor = self.dataSource.backgroundWeatherColor;
 }
 @end

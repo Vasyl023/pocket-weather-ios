@@ -11,6 +11,10 @@
 
 @interface ColorTableViewCellDataSource : BaseTableViewCellDataSource
 
+- (id)initWithColor:(UIColor*)anColor
+             height:(float)aHeight;
+
+
 @end
 
 
@@ -18,6 +22,6 @@
     ColorTableViewCellDataSource* dataSource;
 }
 
-
+- (void)setData:(ColorTableViewCellDataSource*)aData;
 
 @end

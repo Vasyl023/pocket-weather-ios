@@ -6,9 +6,9 @@
 //  Copyright © 2016 Vasyl Pastushenko. All rights reserved.
 //
 
-#import "PochetWeather.h"
+#import "PocketWeather.h"
 
-@implementation PochetWeather
+@implementation PocketWeather
 
 - (id)initWithJSON:(NSDictionary*)json{
     

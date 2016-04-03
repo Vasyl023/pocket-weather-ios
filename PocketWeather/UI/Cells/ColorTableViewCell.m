@@ -18,8 +18,15 @@
     return @"ColorTableViewCell";
 }
 
-+ (float)height{
-    return COLOR_TABLE_CELL_HEIGHT;
+- (id)initWithColor:(UIColor*)anColor
+             height:(float)aHeight{
+    self = [super init];
+    if (self) {
+        self.backgroundWeatherColor = anColor;
+        self.height = aHeight;
+    }
+    return self;
+
 }
 
 @end
@@ -28,8 +35,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.backgroundColor = [UIColor orangeColor];
-    // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -37,5 +43,18 @@
 
     // Configure the view for the selected state
 }
+
+- (void)setData:(ColorTableViewCellDataSource*)aData{
+    self.dataSource = aData;
+    [self layoutSubviews];
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    self.backgroundColor = self.dataSource.backgroundWeatherColor;
+    [self.contentView layoutIfNeeded];
+
+}
+
 
 @end

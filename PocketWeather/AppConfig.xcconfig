@@ -1,0 +1,15 @@
+//
+//  AppConfig.xcconfig
+//  PocketWeather
+//
+//  Created by Vasyl Pastushenko on 4/3/16.
+//  Copyright © 2016 Vasyl Pastushenko. All rights reserved.
+//
+
+PRODUCT_NAME = Pocket W
+APP_VERSION = 0.1
+APP_BUNDLE_ID = 1
+
+FB_APP_ID = 1034970683215299
+
+API_URL = localhost:8000

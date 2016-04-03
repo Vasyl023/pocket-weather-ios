@@ -13,6 +13,7 @@
 @interface BaseTableViewCellDataSource : NSObject
 
 @property (assign, nonatomic) float height;
+@property (strong, nonatomic) UIColor* backgroundWeatherColor;
 
 + (float)height;
 + (NSString*)reuseIdentifier;
@@ -24,5 +25,7 @@
 @interface BaseTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) BaseTableViewCellDataSource* dataSource;
+
+- (void)setData:(BaseTableViewCellDataSource*)aData;
 
 @end

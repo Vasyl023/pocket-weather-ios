@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PochetWeather.h"
+#import "PocketWeather.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface WeatherTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>{
+@interface WeatherTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource,CLLocationManagerDelegate>{
     __weak IBOutlet UITableView *tableDisposer;
+    float ColorCellheight;
 }
 
-@property (strong, nonatomic) PochetWeather *weather;
+@property (strong, nonatomic) PocketWeather *weather;
 
 
 @end

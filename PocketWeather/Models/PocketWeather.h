@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PochetWeather : NSObject
+@interface PocketWeather : NSObject
 
 @property (readwrite, nonatomic, strong) NSString *weatherTime;
 @property (readwrite, nonatomic, strong) NSNumber *weatherTemperature;

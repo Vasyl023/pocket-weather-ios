@@ -9,4 +9,7 @@
 #ifndef PocketWeather_Prefix_pch
 #define PocketWeather_Prefix_pch
 #import "Defines.h"
+#import "AppController.h"
+#import "PocketWeather.h"
+#import "WeatherColor.h"
 #endif /* PocketWeather_Prefix_pch */

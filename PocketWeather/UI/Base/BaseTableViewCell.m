@@ -40,10 +40,12 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 }
+- (void)setData:(BaseTableViewCellDataSource*)aData{
+    NSAssert(NO,@"Create setter for dataSource");
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
 }
 
 @end

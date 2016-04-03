@@ -12,6 +12,7 @@
 
 @interface WeatherInfoTableViewCellDataSource : BaseTableViewCellDataSource
 
+- (id)initWithWeatherId:(NSString*)anID;
 
 @end
 
@@ -19,5 +20,7 @@
 @interface WeatherInfoTableViewCell : BaseTableViewCell{
     WeatherInfoTableViewCellDataSource* dataSource;
 }
+
+- (void)setData:(WeatherInfoTableViewCellDataSource*)aData;
 
 @end
