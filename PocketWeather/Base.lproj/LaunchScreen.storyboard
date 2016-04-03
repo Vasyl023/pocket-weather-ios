@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,14 +15,55 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="QoC-tk-XjP">
+                                <rect key="frame" x="82" y="243" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="q3B-Qa-5Um"/>
+                                    <constraint firstAttribute="width" constant="250" id="sCt-SQ-zns"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pocket Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjM-oV-qFX">
+                                <rect key="frame" x="66" y="501" width="282" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="Ged-rG-Fco"/>
+                                    <constraint firstAttribute="width" constant="282" id="XkF-av-Zxd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.37647058823529411" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="QoC-tk-XjP" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="62" id="1E9-mY-ja0"/>
+                            <constraint firstItem="QoC-tk-XjP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="4EH-MS-DzY"/>
+                            <constraint firstItem="QoC-tk-XjP" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="223" id="7Yz-e1-AAr"/>
+                            <constraint firstItem="QoC-tk-XjP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Eac-Xe-LvD"/>
+                            <constraint firstItem="QoC-tk-XjP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="LRZ-dd-mQr"/>
+                            <constraint firstItem="NjM-oV-qFX" firstAttribute="top" secondItem="QoC-tk-XjP" secondAttribute="bottom" constant="8" id="Uey-gx-WYM"/>
+                            <constraint firstItem="NjM-oV-qFX" firstAttribute="centerX" secondItem="QoC-tk-XjP" secondAttribute="centerX" id="qpa-99-1qO"/>
+                            <constraint firstItem="QoC-tk-XjP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rON-7G-eLE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1E9-mY-ja0"/>
+                                <exclude reference="7Yz-e1-AAr"/>
+                                <exclude reference="LRZ-dd-mQr"/>
+                                <exclude reference="rON-7G-eLE"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sun" width="125" height="125"/>
+    </resources>
 </document>

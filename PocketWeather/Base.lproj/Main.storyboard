@@ -1,10 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ghr-V0-aaS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="Ddr-tI-ePs">
+            <objects>
+                <viewController id="Ghr-V0-aaS" customClass="StartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Nh-mq-2Dg"/>
+                        <viewControllerLayoutGuide type="bottom" id="mUc-KE-SZe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gKK-LZ-gEl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ray" translatesAutoresizingMaskIntoConstraints="NO" id="P1d-Xh-BxN">
+                                <rect key="frame" x="82" y="243" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Pa9-AM-u7i"/>
+                                    <constraint firstAttribute="width" constant="250" id="R1J-G2-by1"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playwithcircle" translatesAutoresizingMaskIntoConstraints="NO" id="U7h-nE-dc1">
+                                <rect key="frame" x="82" y="243" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="eo8-2f-bus"/>
+                                    <constraint firstAttribute="width" constant="250" id="moG-FD-ESw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.37647058820000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="P1d-Xh-BxN" firstAttribute="centerY" secondItem="gKK-LZ-gEl" secondAttribute="centerY" id="Bi1-OB-POZ"/>
+                            <constraint firstItem="U7h-nE-dc1" firstAttribute="centerY" secondItem="gKK-LZ-gEl" secondAttribute="centerY" id="EfT-Y3-VWC"/>
+                            <constraint firstItem="U7h-nE-dc1" firstAttribute="centerX" secondItem="gKK-LZ-gEl" secondAttribute="centerX" id="KMm-ZU-EB2"/>
+                            <constraint firstItem="P1d-Xh-BxN" firstAttribute="centerX" secondItem="gKK-LZ-gEl" secondAttribute="centerX" id="zne-h5-LqZ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="sunImageView" destination="P1d-Xh-BxN" id="rmV-vT-Mjt"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showWeather" id="52J-AE-gwO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7P-cH-FPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="277"/>
+        </scene>
         <!--Weather Table View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -119,7 +164,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="444" y="297"/>
+            <point key="canvasLocation" x="834" y="298"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="playwithcircle" width="125" height="125"/>
+        <image name="ray" width="125" height="125"/>
+    </resources>
 </document>

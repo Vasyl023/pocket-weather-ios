@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "PocketWeather.h"
-#import <CoreLocation/CoreLocation.h>
 
-@interface WeatherTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource,CLLocationManagerDelegate>{
+@interface WeatherTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>{
     __weak IBOutlet UITableView *tableDisposer;
     float ColorCellheight;
 }

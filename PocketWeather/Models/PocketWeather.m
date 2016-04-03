@@ -15,10 +15,11 @@
     self = [super init];
     
     if (self) {
-        self.locationName = @"New York";
-        self.weatherSlogan = @"Sun";
+        NSDictionary *weatherBlock = json[@"weather"];
+        self.locationName = weatherBlock[@"locationName"];
+        self.weatherSlogan = weatherBlock[@"weatherSlogan"];
         self.weatherTemperature = [NSNumber numberWithUnsignedInt:10];
-        self.fearureColorId = @"test";
+        self.weatherId = @"weatherId";
         self.fearureImageId = @"test";
     }
     

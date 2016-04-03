@@ -13,7 +13,6 @@
 
 @interface WeatherTableViewController (){
     NSMutableArray *weatherDataSources;
-    CLLocationManager *locationManager;
 }
 
 @end
@@ -24,7 +23,6 @@
     [super viewDidLoad];
 
 
-    [self setupLocation];
     
     tableDisposer.delegate = self;
     tableDisposer.dataSource = self;
@@ -41,57 +39,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-#pragma mark - network manager
-
-- (void)getWeatherLong:(NSString*)longitude
-                   lat:(NSString*)latitude{
-    
-    NSURLSessionDataTask *request = [[[WeatherRequest alloc] init] getWeatherWithlong:longitude lat:latitude completion:^(NSDictionary *response) {
-        NSLog(@"done");
-    }];
-    
-    [request resume];
-}
-
-#pragma marl - CLlocation manager
-- (void)setupLocation{
-    locationManager = [[CLLocationManager alloc] init];
-
-    if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-        [locationManager requestWhenInUseAuthorization];
-    }
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    [locationManager startUpdatingLocation];
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-       didFailWithError:(NSError *)error
-{
-    
-    UIAlertView *errorAlert = [[UIAlertView alloc]
-                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [errorAlert show];
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation
-{
-    NSLog(@"didUpdateToLocation: %@", newLocation);
-    CLLocation *currentLocation = newLocation;
-    
-    if (currentLocation != nil) {
-        
-        [self getWeatherLong:[NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude]
-                         lat:[NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude]];
-
-        [locationManager stopUpdatingLocation];
-    }
-    
 }
 
 // Calculate height for color cell, for different screen sizes

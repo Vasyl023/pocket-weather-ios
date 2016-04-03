@@ -14,7 +14,11 @@
 @property (readwrite, nonatomic, strong) NSNumber *weatherTemperature;
 @property (readwrite, nonatomic, assign) NSString *locationName;
 @property (readwrite, nonatomic, assign) NSString *weatherSlogan;
+@property (readwrite, nonatomic, strong) NSString *weatherId;
 @property (readwrite, nonatomic, strong) NSString *fearureImageId;
 @property (readwrite, nonatomic, strong) NSString *fearureColorId;
+@property (readwrite, nonatomic, strong) NSArray *music;
+
+- (id)initWithJSON:(NSDictionary*)json;
 
 @end
