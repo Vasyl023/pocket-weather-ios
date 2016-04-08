@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E1BB16071CAEDCCD0031D0B7"
-               BuildableName = "PocketWeather.app"
+               BuildableName = "Pocket W.app"
                BlueprintName = "PocketWeather"
                ReferencedContainer = "container:PocketWeather.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1BB16071CAEDCCD0031D0B7"
-            BuildableName = "PocketWeather.app"
+            BuildableName = "Pocket W.app"
             BlueprintName = "PocketWeather"
             ReferencedContainer = "container:PocketWeather.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1BB16071CAEDCCD0031D0B7"
-            BuildableName = "PocketWeather.app"
+            BuildableName = "Pocket W.app"
             BlueprintName = "PocketWeather"
             ReferencedContainer = "container:PocketWeather.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1BB16071CAEDCCD0031D0B7"
-            BuildableName = "PocketWeather.app"
+            BuildableName = "Pocket W.app"
             BlueprintName = "PocketWeather"
             ReferencedContainer = "container:PocketWeather.xcodeproj">
          </BuildableReference>

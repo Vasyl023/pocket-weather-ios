@@ -33,6 +33,8 @@
     tableDisposer.rowHeight = ColorCellheight;
     tableDisposer.estimatedRowHeight = ColorCellheight;
     
+    
+    
     // Fill Data
     [self fillDataSources];
 }
@@ -58,9 +60,9 @@
 - (void)fillDataSources{
     weatherDataSources = [[NSMutableArray alloc] init];
     
-    WeatherColor *weatherColor = [[WeatherColor alloc] initWithWeathearId:@"1"];
+    WeatherStyle *weatherColor = [[WeatherStyle alloc] initWithWeathearId:self.weather.weatherId];
     
-    WeatherInfoTableViewCellDataSource* data = [[WeatherInfoTableViewCellDataSource alloc] initWithWeatherId:@"1"];
+    WeatherInfoTableViewCellDataSource* data = [[WeatherInfoTableViewCellDataSource alloc] initWithWeatherObject:self.weather];
     
     [weatherDataSources addObject:data];
     
@@ -68,7 +70,9 @@
         [weatherColor updateColorWithStep:10];
         [weatherDataSources addObject:
          [[ColorTableViewCellDataSource alloc] initWithColor:[weatherColor getColor]
-                                                      height:ColorCellheight]
+                                                      height:ColorCellheight
+                                                       audio:self.weather.music[i]
+          ]
          ];
     }
 }
@@ -107,7 +111,6 @@
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:[[weatherDataSources[indexPath.row] class] nibName] owner:self options:nil];
             cell = [nib objectAtIndex:0];
         }
-
         [cell setData: weatherDataSources[indexPath.row]];
 
         return cell;

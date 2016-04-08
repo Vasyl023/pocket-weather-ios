@@ -15,10 +15,11 @@
     return self;
 }
 
-- (id)initWithWeatherId:(NSString*)anID{
+- (id)initWithWeatherObject:(PocketWeather*)anObject{
     self = [super init];
     if (self) {
-        self.backgroundWeatherColor = [[[WeatherColor alloc] initWithWeathearId:anID] getColor];
+        self.weather = anObject;
+        self.backgroundWeatherColor = [[[WeatherStyle alloc] initWithWeathearId:anObject.weatherId] getColor];
     }
     return self;
 }
@@ -52,6 +53,13 @@
 
 - (void)setData:(WeatherInfoTableViewCellDataSource*)aData{
     self.dataSource = aData;
+    self.weatherSloganLabel.text = [aData.weather.weatherSlogan uppercaseString];
+    self.temperatureLabel.text = aData.weather.weatherTemperature ;
+    self.cityLabel.text = [aData.weather.locationName uppercaseString];
+    self.weatherTimeLabel.text = aData.weather.weatherTime;
+    
+    self.weatherIconImageView.image = [[[WeatherStyle alloc] initWithWeathearId:aData.weather.weatherId] getImage];
+    
     [self layoutSubviews];
 
 }

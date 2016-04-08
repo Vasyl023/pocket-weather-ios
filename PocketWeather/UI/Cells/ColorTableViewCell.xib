@@ -7,14 +7,61 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="KGk-i7-Jjw" customClass="ColorTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="ColorTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FG8-8H-Ztn">
+                        <rect key="frame" x="10" y="5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="g2k-mS-5zx"/>
+                            <constraint firstAttribute="width" constant="40" id="oYL-DW-rJc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odd-sJ-ovA">
+                        <rect key="frame" x="58" y="14" width="232" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="232" id="0Tl-jD-8RM"/>
+                            <constraint firstAttribute="height" constant="21" id="zhx-m4-WFW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0Tl-jD-8RM"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FG8-8H-Ztn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3GE-ro-NEr"/>
+                    <constraint firstItem="FG8-8H-Ztn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4F8-tL-pgc"/>
+                    <constraint firstAttribute="trailing" secondItem="odd-sJ-ovA" secondAttribute="trailing" constant="30" id="5BX-li-wIa"/>
+                    <constraint firstAttribute="bottom" secondItem="FG8-8H-Ztn" secondAttribute="bottom" constant="4.5" id="EeJ-7t-jpW"/>
+                    <constraint firstItem="odd-sJ-ovA" firstAttribute="leading" secondItem="FG8-8H-Ztn" secondAttribute="trailing" constant="8" id="NOD-Tg-jGK"/>
+                    <constraint firstItem="FG8-8H-Ztn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Rdv-ja-5In"/>
+                    <constraint firstAttribute="bottom" secondItem="odd-sJ-ovA" secondAttribute="bottom" constant="14.5" id="rqE-8n-gIf"/>
+                    <constraint firstItem="odd-sJ-ovA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="wFv-bF-W0J"/>
+                    <constraint firstItem="odd-sJ-ovA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zbW-3y-yak"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="EeJ-7t-jpW"/>
+                        <exclude reference="Rdv-ja-5In"/>
+                        <exclude reference="rqE-8n-gIf"/>
+                        <exclude reference="wFv-bF-W0J"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="1500" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="audioNameLabel" destination="odd-sJ-ovA" id="lQg-jC-3sI"/>
+                <outlet property="coverImageView" destination="FG8-8H-Ztn" id="enz-2V-G1t"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

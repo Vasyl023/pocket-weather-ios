@@ -7,6 +7,7 @@
 //
 
 #import "ColorTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation ColorTableViewCellDataSource
 
@@ -19,11 +20,13 @@
 }
 
 - (id)initWithColor:(UIColor*)anColor
-             height:(float)aHeight{
+             height:(float)aHeight
+              audio:(Music *)anAudio{
     self = [super init];
     if (self) {
         self.backgroundWeatherColor = anColor;
         self.height = aHeight;
+        self.audio = anAudio;
     }
     return self;
 
@@ -36,6 +39,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.
+    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -46,12 +51,20 @@
 
 - (void)setData:(ColorTableViewCellDataSource*)aData{
     self.dataSource = aData;
+    self.backgroundColor = self.dataSource.backgroundWeatherColor;
+    
+    [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:aData.audio.coverPictureURL]
+                           placeholderImage:[UIImage imageNamed:@"sun"]];
+    
+    
+    self.audioNameLabel.text = [NSString stringWithFormat:@"%@ - %@", aData.audio.artist, aData.audio.title];
+    
+
     [self layoutSubviews];
 }
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    self.backgroundColor = self.dataSource.backgroundWeatherColor;
     [self.contentView layoutIfNeeded];
 
 }

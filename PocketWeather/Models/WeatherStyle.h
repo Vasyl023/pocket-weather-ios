@@ -9,18 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface WeatherColor : NSObject
+@interface WeatherStyle : NSObject
 
 @property (strong,nonatomic) NSString* weatherID;
 
 @property  float red;
 @property  float green;
 @property  float blue;
-
+@property (strong, nonatomic) NSString* iconName;
 
 - (id)initWithWeathearId:(NSString*)aWeatherId;
 
 - (UIColor *)getColor;
+
+- (UIImage *)getImage;
 
 - (void)updateColorWithStep:(float)aStep;
 

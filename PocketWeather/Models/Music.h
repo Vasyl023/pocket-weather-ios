@@ -11,9 +11,11 @@
 @interface Music : NSObject
 
 @property (readwrite, assign, nonatomic) NSString* artist;
-@property (readwrite, assign, nonatomic) NSString* name;
+@property (readwrite, assign, nonatomic) NSString* title;
 @property (readwrite, assign, nonatomic) NSString* album;
 @property (readwrite, assign, nonatomic) NSString* source;
-@property (readwrite, assign, nonatomic) NSString* coverPicture;
+@property (readwrite, assign, nonatomic) NSString* duration;
+@property (readwrite, assign, nonatomic) NSString* coverPictureURL;
+- (id)initWithJSON:(NSDictionary*)aJSON;
 
 @end

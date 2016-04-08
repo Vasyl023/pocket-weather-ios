@@ -12,7 +12,9 @@
 
 @interface WeatherInfoTableViewCellDataSource : BaseTableViewCellDataSource
 
-- (id)initWithWeatherId:(NSString*)anID;
+@property (strong, nonatomic) PocketWeather *weather;
+
+- (id)initWithWeatherObject:(PocketWeather*)anID;
 
 @end
 
@@ -20,6 +22,11 @@
 @interface WeatherInfoTableViewCell : BaseTableViewCell{
     WeatherInfoTableViewCellDataSource* dataSource;
 }
+@property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
+@property (weak, nonatomic) IBOutlet UILabel *weatherSloganLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *weatherTimeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *weatherIconImageView;
 
 - (void)setData:(WeatherInfoTableViewCellDataSource*)aData;
 

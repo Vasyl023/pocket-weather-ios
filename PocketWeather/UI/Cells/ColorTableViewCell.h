@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseTableViewCell.h"
+#import "Music.h"
 
 @interface ColorTableViewCellDataSource : BaseTableViewCellDataSource
 
+@property (strong, nonatomic) Music *audio;
+
 - (id)initWithColor:(UIColor*)anColor
-             height:(float)aHeight;
+             height:(float)aHeight
+              audio:(Music*)anAudio;
 
 
 @end
@@ -21,6 +25,8 @@
 @interface ColorTableViewCell : BaseTableViewCell{
     ColorTableViewCellDataSource* dataSource;
 }
+@property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
+@property (weak, nonatomic) IBOutlet UILabel *audioNameLabel;
 
 - (void)setData:(ColorTableViewCellDataSource*)aData;
 

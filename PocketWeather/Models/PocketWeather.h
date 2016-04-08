@@ -11,7 +11,7 @@
 @interface PocketWeather : NSObject
 
 @property (readwrite, nonatomic, strong) NSString *weatherTime;
-@property (readwrite, nonatomic, strong) NSNumber *weatherTemperature;
+@property (readwrite, nonatomic, strong) NSString *weatherTemperature;
 @property (readwrite, nonatomic, assign) NSString *locationName;
 @property (readwrite, nonatomic, assign) NSString *weatherSlogan;
 @property (readwrite, nonatomic, strong) NSString *weatherId;

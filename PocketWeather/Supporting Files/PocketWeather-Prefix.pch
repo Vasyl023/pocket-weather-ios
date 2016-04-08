@@ -11,5 +11,5 @@
 #import "Defines.h"
 #import "AppController.h"
 #import "PocketWeather.h"
-#import "WeatherColor.h"
+#import "WeatherStyle.h"
 #endif /* PocketWeather_Prefix_pch */

@@ -14,7 +14,7 @@
 		E115B2DD1CB1837300092C9D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E115B2DC1CB1837300092C9D /* CoreLocation.framework */; };
 		E115B2E11CB1A0BD00092C9D /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E115B2E01CB1A0BD00092C9D /* StartViewController.m */; };
 		E115B2E41CB1AAB100092C9D /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = E115B2E31CB1AAB100092C9D /* Music.m */; };
-		E1872C2D1CB0740E00A3F89A /* WeatherColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E1872C2C1CB0740E00A3F89A /* WeatherColor.m */; };
+		E1872C2D1CB0740E00A3F89A /* WeatherStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E1872C2C1CB0740E00A3F89A /* WeatherStyle.m */; };
 		E192989A1CAFC7DD0030812A /* WeatherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19298991CAFC7DD0030812A /* WeatherTableViewController.m */; };
 		E19298A11CAFC98F0030812A /* PocketWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = E19298A01CAFC98F0030812A /* PocketWeather.m */; };
 		E19298A41CAFCAEC0030812A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19298A21CAFCAEC0030812A /* FBSDKCoreKit.framework */; };
@@ -67,8 +67,8 @@
 		E115B2E01CB1A0BD00092C9D /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartViewController.m; path = UI/Start/StartViewController.m; sourceTree = "<group>"; };
 		E115B2E21CB1AAB100092C9D /* Music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Music.h; path = Models/Music.h; sourceTree = "<group>"; };
 		E115B2E31CB1AAB100092C9D /* Music.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Music.m; path = Models/Music.m; sourceTree = "<group>"; };
-		E1872C2B1CB0740E00A3F89A /* WeatherColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherColor.h; path = Models/WeatherColor.h; sourceTree = "<group>"; };
-		E1872C2C1CB0740E00A3F89A /* WeatherColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherColor.m; path = Models/WeatherColor.m; sourceTree = "<group>"; };
+		E1872C2B1CB0740E00A3F89A /* WeatherStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherStyle.h; path = Models/WeatherStyle.h; sourceTree = "<group>"; };
+		E1872C2C1CB0740E00A3F89A /* WeatherStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherStyle.m; path = Models/WeatherStyle.m; sourceTree = "<group>"; };
 		E19298981CAFC7DD0030812A /* WeatherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherTableViewController.h; path = UI/WeatherTableViewController.h; sourceTree = "<group>"; };
 		E19298991CAFC7DD0030812A /* WeatherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherTableViewController.m; path = UI/WeatherTableViewController.m; sourceTree = "<group>"; };
 		E192989F1CAFC98F0030812A /* PocketWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PocketWeather.h; path = Models/PocketWeather.h; sourceTree = "<group>"; };
@@ -180,8 +180,8 @@
 				E19298A01CAFC98F0030812A /* PocketWeather.m */,
 				E19298A61CAFD0480030812A /* User.h */,
 				E19298A71CAFD0480030812A /* User.m */,
-				E1872C2B1CB0740E00A3F89A /* WeatherColor.h */,
-				E1872C2C1CB0740E00A3F89A /* WeatherColor.m */,
+				E1872C2B1CB0740E00A3F89A /* WeatherStyle.h */,
+				E1872C2C1CB0740E00A3F89A /* WeatherStyle.m */,
 				E115B2E21CB1AAB100092C9D /* Music.h */,
 				E115B2E31CB1AAB100092C9D /* Music.m */,
 			);
@@ -495,7 +495,7 @@
 				E19298A11CAFC98F0030812A /* PocketWeather.m in Sources */,
 				E192989A1CAFC7DD0030812A /* WeatherTableViewController.m in Sources */,
 				E1BB160D1CAEDCCD0031D0B7 /* main.m in Sources */,
-				E1872C2D1CB0740E00A3F89A /* WeatherColor.m in Sources */,
+				E1872C2D1CB0740E00A3F89A /* WeatherStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

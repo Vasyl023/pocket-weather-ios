@@ -60,8 +60,9 @@
     NSURLSessionDataTask *request = [[[WeatherRequest alloc] init] getWeatherWithlong:longitude lat:latitude completion:^(NSDictionary *response) {
         NSLog(@"%@",response);
         self.pw = [[PocketWeather alloc] initWithJSON:response];
+        
         [self performSegueWithIdentifier:@"showWeather" sender:self];
-    }];
+    } ];
     
     
     [request resume];
@@ -100,11 +101,11 @@
     CLLocation *currentLocation = newLocation;
     
     if (currentLocation != nil) {
-        
+        [locationManager stopUpdatingLocation];
+
         [self getWeatherLong:[NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude]
                          lat:[NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude]];
         
-        [locationManager stopUpdatingLocation];
     }
     
 }
@@ -113,9 +114,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showWeather"]) {
-        PocketWeather *pw = [(StartViewController *) sender pw];
+        PocketWeather *pw = self.pw;
         WeatherTableViewController *vc = (WeatherTableViewController *)segue.destinationViewController;
         vc.weather = pw;
+        ((WeatherTableViewController *)segue.destinationViewController).weather = pw;
     }
 }
 

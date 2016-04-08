@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="kwl-cG-9LT">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud-sun" translatesAutoresizingMaskIntoConstraints="NO" id="kwl-cG-9LT">
                         <rect key="frame" x="8" y="60" width="70" height="70"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="GuG-Hh-MkN"/>
@@ -96,10 +96,17 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="1" green="0.1025861391" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <inset key="separatorInset" minX="1500" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="cityLabel" destination="oRh-r0-OcQ" id="aFw-zi-kow"/>
+                <outlet property="temperatureLabel" destination="oKj-rC-aBG" id="XSv-7S-yuh"/>
+                <outlet property="weatherIconImageView" destination="kwl-cG-9LT" id="2FH-1q-H4d"/>
+                <outlet property="weatherSloganLabel" destination="A1z-vr-IYN" id="VTj-7d-u8S"/>
+                <outlet property="weatherTimeLabel" destination="phT-oH-zGw" id="ZtK-ra-PU0"/>
+            </connections>
             <point key="canvasLocation" x="245" y="179"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="sun" width="64" height="64"/>
+        <image name="cloud-sun" width="512" height="512"/>
     </resources>
 </document>
